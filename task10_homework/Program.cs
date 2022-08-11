@@ -3,15 +3,17 @@
 Console.WriteLine("Введите трёхзначное чилсо: ");
 int number = int.Parse(Console.ReadLine());
 
-int num1 = number % 100;
-int num2 = num1 / 10;
+int AbsNumber = Math.Abs(number);
 
-if ((number < 100) || (number > 1000))
+int a = number % 100;
+int b = a / 10;
+
+if ((AbsNumber < 100) || (AbsNumber > 1000))
 {
     Console.Write($"Число {number} не является трёхзначным");
 }
 
 else
 {
-    Console.Write($"Вторая цифра числа {number}: {num2}");
+    Console.Write($"Вторая цифра числа {AbsNumber}: {b}");
 }
